@@ -1,7 +1,7 @@
 RPG Maker MV Cheat Menu Plugin
 ==============================
 
-I've created a plugin for RPG Maker MV that allows users to access a Cheat Menu in game. The controls are all input via the number keys \[0\]\-\[9\] (not the NUMPAD) (other keys may be used as well now) or the mouse.
+I've created a plugin for RPG Maker MV that allows users to access a Cheat Menu in game. The controls are all input via the number keys \[0\]\-\[9\] (not the numeric key pad) (other keys may be used as well now) or the mouse.
 
 Open the Menu by pressing the \[1\] Key.  
 Move menu to different positions with \` (key with tilde ~)  
@@ -31,7 +31,7 @@ Available Cheats Are
   * With this you can edit game Variables and Switches (at your own risk) in the $gameVariables and $gameSwitches, as well as other advanced stuff
 * Open Switch/Variable Debug Menu from playtest Mode with F9
   * Better/easier method for editing the Switches and Variables than using the console, slower if you want to edit variables by large amounts
- 
+
 Downloads
 ---------
 
@@ -41,7 +41,6 @@ Download: [GitHub](https://github.com/emerladCoder/RPG-Maker-MV-Cheat-Menu-Plugi
 
 I've tested this to work with Cursed Armor and 魔王イリスの逆襲[RJ176175] (both are NSFW)
 
- 
 Install
 -------
 
@@ -57,13 +56,13 @@ Install
 * Patch your www/js/plugins.js  
   * Backup your www/js/plugins.js file
   * Patch
-      * Run MVPluginPatcher.exe  
+    * Run MVPluginPatcher.exe  
         or
-      * Manually Add the following to your plugins.js file
-        * {"name":"Cheat_Menu","status":true,"description":"","parameters":{}}
- * Delete MVPluginPatcher.exe and plugins_patch.txt
+    * Manually Add the following to your plugins.js file
+      * `{"name":"Cheat_Menu","status":true,"description":"","parameters":{}}`
+* Delete MVPluginPatcher.exe and plugins_patch.txt
 
-If the www/js/plugins.js is read only, remove that in the properties or the patch with fail. 
+If the www/js/plugins.js is read only, remove that in the properties or the patch with fail.
 
 Some games might have have altered the plugin loading mechanism (for example using a single composite plugin to save space). In this case you should open the GameFolder/www/js/main.js and insert the code as shown below in order to get any extra plugins to load.
 
@@ -75,7 +74,7 @@ Some games might have have altered the plugin loading mechanism (for example usi
 PluginManager.setup($plugins);
 
 // Insert the code below, change plugin name if loading something besides Cheat_Menu
-PluginManager._path= 'js/plugins/'; 
+PluginManager._path= 'js/plugins/';
 PluginManager.loadScript('Cheat_Menu.js');
 // End Insert
 
@@ -84,7 +83,7 @@ window.onload = function() {
 };
 
 ```
- 
+
 Uninstall
 ---------
 
@@ -96,6 +95,7 @@ Uninstall
 
 Other Cool Stuff
 ----------------
+
 Original ULMF thread for this plugin: [thread](http://www.ulmf.org/bbs/showthread.php?t=28982)
 
 I might also suggest Libellule's text hook for untranslated games: [thread](http://www.ulmf.org/bbs/showthread.php?t=29359)  
